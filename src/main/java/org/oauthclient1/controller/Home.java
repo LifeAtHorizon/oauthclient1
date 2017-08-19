@@ -11,4 +11,9 @@ public class Home {
 	public String index() {
 	return "index";	
 	}
+	
+	@RequestMapping(value="/securePage",method=RequestMethod.GET)
+	public String securePage() {
+		return "securePage";
+	}
 }

@@ -1,0 +1,22 @@
+server:
+    port: 8081
+    context-path: /ui
+    session:
+      cookie:
+        name: UISESSION
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: gansh
+      clientSecret: ganshsecret
+      accessTokenUri: http://localhost:8082/auth/oauth/token
+      userAuthorizationUri: http://localhost:8082/auth/oauth/authorize
+     
+        
+    resource:
+      userInfoUri: http://localhost:8082/auth/user
+spring:
+  thymeleaf:
+    cache: false
